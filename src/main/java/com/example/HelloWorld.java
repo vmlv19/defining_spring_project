@@ -12,8 +12,8 @@ public class HelloWorld {
     public void sayHello() {
         System.out.println("Hello World");
 
-        System.out.println("Usuario: " + user.getName() + " " +
-                user.getLastName() + ", Fecha de Nacimiento: " +
-                user.getBirthDate());
+        System.out.println("Usuario: " + user.getName() + " " + user.getLastName() +
+                ", Fecha de Nacimiento: " + (user.getBirthDate() != null ? user.getBirthDate() : "No definida"));
+
     }
 }

@@ -46,10 +46,13 @@ public class User {
 
     @PostConstruct
     public void init() {
+        System.out.println("Init de User ejecutado");
+        System.out.println("Valor inyectado: " + dateOfBirthReal);
         try {
             this.birthDate = new SimpleDateFormat("yyyy-MM-dd").parse(dateOfBirthReal);
         } catch (Exception e) {
             System.out.println("Error al convertir la fecha: " + e.getMessage());
         }
     }
+
 }

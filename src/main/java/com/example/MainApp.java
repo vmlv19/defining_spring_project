@@ -6,6 +6,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class MainApp {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+        // Asegura que el bean User se inicializa correctamente
+        context.getBean(User.class);
+
         HelloWorld helloWorld = context.getBean(HelloWorld.class);
         helloWorld.sayHello();
     }
